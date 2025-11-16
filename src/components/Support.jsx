@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Support() {
+export default function ContactForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -9,6 +10,7 @@ export default function Support() {
   });
 
   const [status, setStatus] = useState("");
+  const navigate = useNavigate();  // Initialize useNavigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,6 +45,9 @@ export default function Support() {
           phone: "",
           message: "",
         });
+
+        // Redirect to the dashboard after successful form submission
+        navigate("/dashboard"); 
       } else {
         setStatus("Failed to send your message. Please try again later.");
       }

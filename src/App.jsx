@@ -10,7 +10,11 @@ import ContactSection from "./pages/Contact";
 import ProductsServices from "./pages/Products";
 import SecuritySafety from "./pages/SecuritySafety";
 import Dashboard from "./pages/Dashboard";
-import ProtectedRoute from "./components/ProtectedRoute"; // Import ProtectedRoute
+import ProtectedRoute from "./components/ProtectedRoute"; 
+import Support from "./components/Support";
+
+
+
 
 export default function App() {
   return (
@@ -54,6 +58,15 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/support"
+            element={
+              <ProtectedRoute>
+                <Support />
               </ProtectedRoute>
             }
           />
