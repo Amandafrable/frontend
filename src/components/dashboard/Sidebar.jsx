@@ -16,15 +16,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile Top Left Button */}
-      <button
-        onClick={() => setOpen(true)}
-        className="md:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-md shadow"
-      >
-        <Menu className="w-6 h-6 text-blue-900" />
-      </button>
-
-      {/* Sidebar */}
       <aside
         className={`fixed md:static top-0 left-0 h-full w-72 bg-white border-r p-6 z-40 transform transition-transform duration-300
           ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
