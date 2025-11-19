@@ -1,16 +1,21 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+
 
     // Check authToken on mount + when localStorage changes
     useEffect(() => {
         const token = localStorage.getItem("authToken");
         setIsLoggedIn(!!token);
-    }, []);
+    }, [location]);
+
 
     const handleLogout = () => {
         localStorage.removeItem("authToken");
@@ -89,7 +94,7 @@ export default function Navbar() {
                 </div>
 
                 <ul className="px-6 py-4 space-y-5 text-blue-900 font-medium">
-                     <li className="border-b pb-3">
+                    <li className="border-b pb-3">
                         <Link to="/" className="hover:text-blue-600" onClick={() => setOpen(false)}>Home</Link>
                     </li>
                     <li className="border-b pb-3">
@@ -107,7 +112,7 @@ export default function Navbar() {
                 <div className="px-6 mt-6">
                     {isLoggedIn ? (
                         <button
-                            className="w-full text-white py-1 rounded-md hover:bg-red-700 transition"
+                            className="w-full bg-red-500 text-white py-1 rounded-md hover:bg-red-700 transition"
                             onClick={() => {
                                 setOpen(false);
                                 handleLogout();
@@ -117,7 +122,7 @@ export default function Navbar() {
                         </button>
                     ) : (
                         <button
-                            className="w-full text-white py-1 rounded-md hover:bg-blue-950 transition"
+                            className="w-full bg-blue-600 text-white py-1 rounded-md hover:bg-blue-800 transition"
                             onClick={() => {
                                 setOpen(false);
                                 navigate("/login");
@@ -127,6 +132,7 @@ export default function Navbar() {
                         </button>
                     )}
                 </div>
+
             </div>
         </>
     );
