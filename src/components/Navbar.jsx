@@ -46,7 +46,7 @@ export default function Navbar() {
                             <Link to="/security" className="hover:text-gray-200">Security & Safety</Link>
                         </li>
                         <li>
-                            <Link to="/contact" className="hover:text-gray-200">Contact</Link>
+                            <Link to="/support" className="hover:text-gray-200">Contact</Link>
                         </li>
                     </ul>
 
