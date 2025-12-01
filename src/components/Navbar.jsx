@@ -104,7 +104,7 @@ export default function Navbar() {
                         <Link to="/security" className="hover:text-blue-600" onClick={() => setOpen(false)}>Security & Safety</Link>
                     </li>
                     <li className="border-b pb-3">
-                        <Link to="/contact" className="hover:text-blue-600" onClick={() => setOpen(false)}>Contact</Link>
+                        <Link to="/support" className="hover:text-blue-600" onClick={() => setOpen(false)}>Contact</Link>
                     </li>
                 </ul>
 
