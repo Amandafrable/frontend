@@ -13,7 +13,7 @@ export default function Topbar() {
 
           <div className="flex items-center gap-3">
             <div className="text-right">
-              <div className="text-sm font-medium">Edward Droho</div>
+              <div className="text-sm font-medium">Deborah Douglas</div>
               <div className="text-xs text-gray-500">Personal</div>
             </div>
             <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">JD</div>
