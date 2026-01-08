@@ -90,7 +90,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-lg font-semibold text-gray-900">
-                  Welcome back
+                  Welcome back, Deborah
                 </h1>
                 <p className="text-sm text-gray-600">
                   Here's what's happening with your accounts
