@@ -28,7 +28,7 @@ export default function Dashboard() {
       const token = localStorage.getItem("authToken");
 
       // Fetch accounts
-      const accountsRes = await axios.get("https://server-avwt.onrender.com/api/accounts", {
+      const accountsRes = await axios.get("https://testing-cn8i.onrender.com/api/accounts", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -54,7 +54,7 @@ export default function Dashboard() {
 
       // Fetch transactions for the specific account
       const transactionsRes = await axios.get(
-        `https://server-avwt.onrender.com/api/accounts/${accountId}/transactions`,
+        `https://testing-cn8i.onrender.com/api/accounts/${accountId}/transactions`,
         {
           headers: {
             "Authorization": `Bearer ${token}`,
